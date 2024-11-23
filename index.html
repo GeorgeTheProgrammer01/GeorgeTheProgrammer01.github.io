@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <style>
+    /* General reset and styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c, #a5d8ff);
+      animation: gradientShift 10s infinite alternate;
+      overflow: hidden;
+    }
+
+    /* Gradient animation */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Floating box effect */
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Glowing button */
+    .button {
+      font-size: 18px;
+      padding: 15px 30px;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(90deg, #ff758c, #a5d8ff);
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #ff758c, 0 0 20px #a5d8ff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff758c;
+    }
+
+    /* Rotating text */
+    .heading {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World!</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p>Click the button to check out my resume!</p>
-<a href="https://georgetheprogrammer01.github.io/resumeCV/" target="_blank">
-    <button style="background-color: blue; color: white;">Click Me!</button>
-</a>
+  <div class="container">
+    <div class="heading">Welcome to My Cool Page!</div>
+    <a class="button" href="https://georgetheprogrammer01.github.io/resumeCV/" target="_blank">Click Me</a>
+  </div>
 </body>
 </html>
